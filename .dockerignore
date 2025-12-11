@@ -1,0 +1,8 @@
+# Exclude everything by default
+*
+
+# Then include only what's needed
+!app.py
+!index.html
+!pytorch_lora_weights.safetensors
+!requirements_interior.txt

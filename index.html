@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design AI - Transform Your Space</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .upload-section {
+            margin-bottom: 0;
+        }
+
+        .upload-area {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f8f9ff;
+        }
+
+        .upload-area:hover {
+            border-color: #764ba2;
+            background: #f0f2ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #764ba2;
+            background: #e8ebff;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .upload-text {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .upload-hint {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        #imageInput {
+            display: none;
+        }
+
+        .prompt-section {
+            margin-bottom: 0;
+        }
+
+        .prompt-section label {
+            display: block;
+            font-size: 1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .prompt-input {
+            width: 100%;
+            padding: 12px;
+            font-size: 0.95em;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .prompt-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .suggestions {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .suggestion-chip {
+            background: #f0f2ff;
+            color: #667eea;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #667eea;
+        }
+
+        .suggestion-chip:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .settings-section {
+            margin-bottom: 0;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+
+        .settings-toggle {
+            cursor: pointer;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95em;
+        }
+
+        .settings-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .settings-content.active {
+            display: block;
+        }
+
+        .setting-item {
+            margin-bottom: 10px;
+        }
+
+        .setting-item label {
+            display: block;
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .setting-item input[type="range"] {
+            width: 100%;
+        }
+
+        .setting-value {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .generate-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .generate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .preview-section {
+            display: none;
+            margin-bottom: 0;
+        }
+
+        .preview-section.active {
+            display: block;
+        }
+
+        .preview-section h3 {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .image-preview {
+            width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 10px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: #f8f9ff;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result-section {
+            display: none;
+        }
+
+        .result-section.active {
+            display: block;
+        }
+
+        .result-section h2 {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .result-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-item h3 {
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .result-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: #f8f9ff;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .download-btn {
+            flex: 1;
+            padding: 10px 20px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            display: none;
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c33;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .status-badge.healthy {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-badge.error {
+            background: #fee;
+            color: #c33;
+        }
+
+        @media (max-width: 1200px) {
+            .main-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-images {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .main-card {
+                padding: 15px;
+            }
+
+            .result-images {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Interior Design AI</h1>
+            <p>Transform your space with AI-powered design edits</p>
+            <div style="margin-top: 15px;">
+                <span id="apiStatus" class="status-badge">Checking...</span>
+            </div>
+        </div>
+
+        <div class="main-card">
+            <div class="left-panel">
+                <div class="error-message" id="errorMessage"></div>
+
+                <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click to upload or drag & drop your room image</div>
+                    <div class="upload-hint">Supports JPG, PNG • Max 10MB</div>
+                </div>
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+
+            <div class="preview-section" id="previewSection">
+                <h3>Your Image:</h3>
+                <img id="imagePreview" class="image-preview" alt="Preview">
+            </div>
+
+            <div class="prompt-section">
+                <label for="promptInput">What would you like to change?</label>
+                <textarea 
+                    id="promptInput" 
+                    class="prompt-input" 
+                    rows="3" 
+                    placeholder="E.g., Add a large abstract painting above the sofa"
+                ></textarea>
+                <div class="suggestions">
+                    <span class="suggestion-chip">Add modern pendant lights</span>
+                    <span class="suggestion-chip">Change wall color to light blue</span>
+                    <span class="suggestion-chip">Add indoor plants</span>
+                    <span class="suggestion-chip">Replace wooden table with marble</span>
+                    <span class="suggestion-chip">Add Persian rug</span>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="settings-toggle" onclick="toggleSettings()">
+                    <span>⚙️ Advanced Settings</span>
+                    <span id="settingsArrow">▼</span>
+                </div>
+                <div class="settings-content" id="settingsContent">
+                    <div class="setting-item">
+                        <label>Inference Steps: <span class="setting-value" id="stepsValue">50</span></label>
+                        <input type="range" id="stepsSlider" min="20" max="100" value="50" step="5">
+                    </div>
+                    <div class="setting-item">
+                        <label>Guidance Scale: <span class="setting-value" id="guidanceValue">7.5</span></label>
+                        <input type="range" id="guidanceSlider" min="1" max="15" value="7.5" step="0.5">
+                    </div>
+                    <div class="setting-item">
+                        <label>Image Guidance: <span class="setting-value" id="imageGuidanceValue">1.5</span></label>
+                        <input type="range" id="imageGuidanceSlider" min="1" max="3" value="1.5" step="0.1">
+                    </div>
+                    <div class="setting-item" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+                        <label style="display: flex; align-items: center; cursor: pointer; font-size: 1em;">
+                            <input type="checkbox" id="resizeToOriginal" checked style="margin-right: 10px; width: 18px; height: 18px; cursor: pointer;">
+                            <span>Resize output to match original image dimensions</span>
+                        </label>
+                        <p style="font-size: 0.85em; color: #666; margin-top: 8px; margin-left: 28px;">
+                            When enabled, the generated image will be resized to your original image size. 
+                            Uncheck for consistent 512×512 output.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <button class="generate-btn" id="generateBtn" onclick="generateImage()" disabled>
+                    🎨 Generate Design
+                </button>
+
+                    <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p style="font-size: 0.95em;">Generating... 1-2 min</p>
+                    <p style="color: #666; margin-top: 5px; font-size: 0.8em;">AI magic in progress ✨</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                    <div class="result-section" id="resultSection">
+                    <h2>✨ Your Transformed Space</h2>
+                    <div class="result-images">
+                        <div class="result-item">
+                            <h3>Original</h3>
+                            <img id="originalImage" alt="Original">
+                        </div>
+                        <div class="result-item">
+                            <h3>AI Generated</h3>
+                            <img id="generatedImage" alt="Generated">
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="download-btn" onclick="downloadImage()">⬇️ Download</button>
+                        <button class="download-btn" onclick="resetForm()" style="background: #667eea;">🔄 Try Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000';
+        let uploadedImage = null;
+        let generatedImageData = null;
+
+        // Check API health on load
+        checkAPIHealth();
+
+        // Upload area interactions
+        const uploadArea = document.getElementById('uploadArea');
+        const imageInput = document.getElementById('imageInput');
+
+        uploadArea.addEventListener('click', () => imageInput.click());
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            handleImageUpload(file);
+        });
+
+        imageInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            handleImageUpload(file);
+        });
+
+        // Suggestion chips
+        document.querySelectorAll('.suggestion-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.getElementById('promptInput').value = chip.textContent;
+            });
+        });
+
+        // Settings sliders
+        document.getElementById('stepsSlider').addEventListener('input', (e) => {
+            document.getElementById('stepsValue').textContent = e.target.value;
+        });
+
+        document.getElementById('guidanceSlider').addEventListener('input', (e) => {
+            document.getElementById('guidanceValue').textContent = e.target.value;
+        });
+
+        document.getElementById('imageGuidanceSlider').addEventListener('input', (e) => {
+            document.getElementById('imageGuidanceValue').textContent = e.target.value;
+        });
+
+        // Enable generate button when image and prompt are ready
+        imageInput.addEventListener('change', checkFormReady);
+        document.getElementById('promptInput').addEventListener('input', checkFormReady);
+
+        function checkAPIHealth() {
+            fetch(`${API_URL}/health`)
+                .then(res => res.json())
+                .then(data => {
+                    const badge = document.getElementById('apiStatus');
+                    if (data.model_loaded) {
+                        badge.textContent = '✓ API Ready';
+                        badge.className = 'status-badge healthy';
+                    } else {
+                        badge.textContent = '⚠ Model Loading...';
+                        badge.className = 'status-badge';
+                    }
+                })
+                .catch(() => {
+                    const badge = document.getElementById('apiStatus');
+                    badge.textContent = '✗ API Offline';
+                    badge.className = 'status-badge error';
+                });
+        }
+
+        function toggleSettings() {
+            const content = document.getElementById('settingsContent');
+            const arrow = document.getElementById('settingsArrow');
+            content.classList.toggle('active');
+            arrow.textContent = content.classList.contains('active') ? '▲' : '▼';
+        }
+
+        function handleImageUpload(file) {
+            if (!file || !file.type.startsWith('image/')) {
+                showError('Please upload a valid image file');
+                return;
+            }
+
+            uploadedImage = file;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('imagePreview').src = e.target.result;
+                document.getElementById('previewSection').classList.add('active');
+            };
+            reader.readAsDataURL(file);
+            checkFormReady();
+        }
+
+        function checkFormReady() {
+            const prompt = document.getElementById('promptInput').value.trim();
+            const btn = document.getElementById('generateBtn');
+            btn.disabled = !(uploadedImage && prompt);
+        }
+
+        async function generateImage() {
+            const prompt = document.getElementById('promptInput').value.trim();
+            const steps = document.getElementById('stepsSlider').value;
+            const guidance = document.getElementById('guidanceSlider').value;
+            const imageGuidance = document.getElementById('imageGuidanceSlider').value;
+            const resizeToOriginal = document.getElementById('resizeToOriginal').checked;
+
+            if (!uploadedImage || !prompt) return;
+
+            // Show loading
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('generateBtn').disabled = true;
+            document.getElementById('resultSection').classList.remove('active');
+            hideError();
+
+            // Prepare form data
+            const formData = new FormData();
+            formData.append('image', uploadedImage);
+            formData.append('prompt', prompt);
+            formData.append('num_steps', steps);
+            formData.append('guidance_scale', guidance);
+            formData.append('image_guidance_scale', imageGuidance);
+            formData.append('resize_to_original', resizeToOriginal ? 'true' : 'false');
+
+            try {
+                const response = await fetch(`${API_URL}/generate`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Generation failed');
+                }
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Show results
+                    generatedImageData = result.image;
+                    document.getElementById('originalImage').src = document.getElementById('imagePreview').src;
+                    document.getElementById('generatedImage').src = 'data:image/png;base64,' + result.image;
+                    document.getElementById('resultSection').classList.add('active');
+                } else {
+                    throw new Error(result.error || 'Unknown error');
+                }
+            } catch (error) {
+                showError('Failed to generate image: ' + error.message);
+            } finally {
+                document.getElementById('loading').classList.remove('active');
+                document.getElementById('generateBtn').disabled = false;
+            }
+        }
+
+        function downloadImage() {
+            if (!generatedImageData) return;
+
+            const link = document.createElement('a');
+            link.href = 'data:image/png;base64,' + generatedImageData;
+            link.download = 'interior-design-ai-result.png';
+            link.click();
+        }
+
+        function resetForm() {
+            uploadedImage = null;
+            generatedImageData = null;
+            document.getElementById('imageInput').value = '';
+            document.getElementById('promptInput').value = '';
+            document.getElementById('previewSection').classList.remove('active');
+            document.getElementById('resultSection').classList.remove('active');
+            document.getElementById('generateBtn').disabled = true;
+            hideError();
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('active');
+        }
+
+        function hideError() {
+            document.getElementById('errorMessage').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
