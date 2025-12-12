@@ -153,6 +153,132 @@ with open("room.jpg", "rb") as f:
 - **Timesteps:** 1000 (training), 50 (inference default)
 - **Processing Size:** 512×512 latent space with 8x compression
 - **Output:** Automatically resized to original image dimensions
+ 
+### Updated Training Workflow (Local Dataset + Custom Training Script)
+
+This project uses a modified LoRA training pipeline adapted from the Diffusers InstructPix2Pix implementation. We do not train using the original HuggingFace dataset format directly. Instead, we generate a local disk-backed Arrow dataset using `split_dataset.py` and then train using our updated training script located inside the Diffusers repository under:
+
+```
+diffusers/examples/research_projects/instructpix2pix_lora/train_instruct_pix2pix_lora.py
+```
+
+This script is the version we edited for our use case and fully replaces the default Diffusers script.
+
+---
+
+### 1. Prepare the Dataset Locally (Run First)
+
+We first download the dataset from HuggingFace and convert it into a local disk-based Arrow dataset that Diffusers can train on.
+
+Run:
+
+```bash
+python split_dataset.py
+```
+
+This script performs:
+
+1. Downloads the dataset from:  
+   `victorzarzu/interior-design-prompt-editing-dataset-train`
+2. Splits it using an **80% train / 20% test** ratio  
+3. Saves it into a folder with the following structure:
+
+```
+interior_design_split/
+    train/
+        data-00000-of-00003.arrow
+        data-00001-of-00003.arrow
+        data-00002-of-00003.arrow
+        dataset_info.json
+        state.json
+    test/
+        data-00000-of-00001.arrow
+        dataset_info.json
+        state.json
+    dataset_dict.json
+```
+
+This folder is what you point to using the `--dataset_name` argument in the training command.
+
+---
+
+### 2. Replace Diffusers’ Original Training Script
+
+Clone Diffusers (optional, only if you want the reference structure):
+
+```bash
+git clone https://github.com/huggingface/diffusers.git
+cd diffusers/examples/research_projects/instructpix2pix_lora
+pip install -r requirements.txt
+pip install accelerate
+```
+
+Place **our updated training script** into the same directory above, replacing the original:
+
+```
+train_instruct_pix2pix_lora.py
+```
+
+The updated script contains:
+
+- Correct column bindings for our dataset:  
+  `original_image`, `designed_image`, `edit_prompt`
+- Loading the dataset using `load_from_disk` instead of `load_dataset`
+- Stable logging and configuration controls
+- Saving LoRA adapters to:  
+  `ip2p-lora-interior/`
+
+---
+
+### 3. Launch Training (Using Our Updated Script)
+
+After running `split_dataset.py` and replacing the training script, launch training:
+
+```bash
+accelerate launch train_instruct_pix2pix_lora.py \
+  --pretrained_model_name_or_path="timbrooks/instruct-pix2pix" \
+  --dataset_name="Your_Dataset_Path" \ 
+  --original_image_column="original_image" \
+  --edited_image_column="designed_image" \
+  --edit_prompt_column="edit_prompt" \
+  --resolution=256 \
+  --random_flip \
+  --train_batch_size=4 \
+  --gradient_accumulation_steps=4 \
+  --num_train_epochs=20 \
+  --learning_rate=1e-4 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --output_dir="ip2p-lora-interior" \
+  --seed=42
+```
+
+This creates a trained LoRA adapter folder:
+
+```
+ip2p-lora-interior/
+    adapter_config.json
+    pytorch_lora_weights.safetensors
+```
+
+These weights are the same ones loaded by the FastAPI backend:
+
+```
+pytorch_lora_weights.safetensors
+```
+
+---
+
+### Summary
+
+The final training workflow:
+
+1. Run `split_dataset.py` to generate `interior_design_split/`
+2. Replace Diffusers’ training script with our customized version
+3. Launch training via `accelerate`
+4. Use the exported LoRA weights inside the FastAPI application
+
+This ensures reproducible fine-tuning and consistent formatting aligned with our dataset and application requirements.
 
 ## 📊 Performance
 
