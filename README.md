@@ -4,18 +4,22 @@
 
 An AI-powered interior design image editor using InstructPix2Pix fine-tuned with LoRA (Low-Rank Adaptation). Generate realistic interior design modifications through natural language instructions.
 
+## 👥 Team
+
+Sachin Otsuka Arjun (so2748), Sze Ning Tan (st3730), Jui-Chen Pu (jp4589), Charlotte Niklahs (ccn2128), Keshav Ramesh (kr3150), Aidynbek Mussa (am6565)
+
 ## 🎯 Project Overview
 
 This project implements a production-ready FastAPI application that allows users to edit interior design images using text prompts. The model is based on InstructPix2Pix (~1B parameters) fine-tuned with LoRA weights (~1.6M parameters) on the interior design dataset.
 
 ### Key Features
 
-- ✅ **FastAPI REST API** with automatic documentation
-- ✅ **Beautiful web interface** with drag-and-drop upload
-- ✅ **Docker deployment** ready for production
-- ✅ **LoRA fine-tuning** for efficient model adaptation (0.15% additional parameters)
-- ✅ **GPU acceleration** support (CUDA/MPS)
-- ✅ **Interactive API documentation** (Swagger UI)
+- **FastAPI REST API** with automatic documentation
+- **Beautiful web interface** with drag-and-drop upload
+- **Docker deployment** ready for production
+- **LoRA fine-tuning** for efficient model adaptation (0.15% additional parameters)
+- **GPU acceleration** support (CUDA/MPS)
+- **Interactive API documentation** (Swagger UI)
 
 ## 🚀 Quick Start
 
@@ -351,13 +355,6 @@ docker run --rm --gpus all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
 - **API Docs:** http://localhost:8000/docs (when running)
 - **Health Check:** http://localhost:8000/health
 
-## 🔐 Security Notes
-
-- CORS is enabled for all origins (development mode)
-- For production, restrict CORS to specific domains
-- Add authentication for public deployments
-- Use HTTPS in production environments
-
 ## 📄 License
 
 This project uses the InstructPix2Pix model which is subject to its own license terms.
@@ -367,11 +364,3 @@ This project uses the InstructPix2Pix model which is subject to its own license 
 - **Base Model:** [InstructPix2Pix by Tim Brooks](https://huggingface.co/timbrooks/instruct-pix2pix)
 - **Dataset:** [Interior Design Dataset by victorzarzu](https://huggingface.co/datasets/victorzarzu/interior-design-prompt-editing-dataset-train)
 - **Framework:** FastAPI, Diffusers, PyTorch, Transformers
-
-## 👥 Team
-
-**Generative AI Course - Final Project Team**
-
----
-
-**Made with ❤️ for Interior Design AI**
