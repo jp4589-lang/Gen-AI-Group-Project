@@ -1,0 +1,702 @@
+[
+  {
+    "index": 0,
+    "prompt": "Add a gallery wall above the sofa.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a gallery wall above the sofa.\"\n\nEvaluate this image with EXTREME sc"
+  },
+  {
+    "index": 1,
+    "prompt": "Add a palm tree in the corner.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a palm tree in the corner.\"\n\nEvaluate this image with EXTREME scruti"
+  },
+  {
+    "index": 2,
+    "prompt": "Remove the marble countertops and replace them with granite countertops.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the marble countertops and replace them with granite countertops."
+  },
+  {
+    "index": 3,
+    "prompt": "Add a blue pillow on the sofa.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a blue pillow on the sofa.\"\n\nEvaluate this image with EXTREME scruti"
+  },
+  {
+    "index": 4,
+    "prompt": "Remove the bookshelf filled with novels.",
+    "score": 70.0,
+    "follows_instruction": true,
+    "reasoning": "The bookshelf is gone, but the room still has a messy appearance. The instruction was followed, but the changes are not perfect"
+  },
+  {
+    "index": 5,
+    "prompt": "Change the tabletop to a monochrome black.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the tabletop to a monochrome black.\"\n\nEvaluate this image with EX"
+  },
+  {
+    "index": 6,
+    "prompt": "Add a colorful accent chair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a colorful accent chair.\"\n\nEvaluate this image with EXTREME scrutiny"
+  },
+  {
+    "index": 7,
+    "prompt": "Add lavender essential oil to the aromatherapy diffuser.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add lavender essential oil to the aromatherapy diffuser.\"\n\nEvaluate this"
+  },
+  {
+    "index": 8,
+    "prompt": "Incorporate a pop of color with a brightly colored backsplash.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Incorporate a pop of color with a brightly colored backsplash.\"\n\nEvaluat"
+  },
+  {
+    "index": 9,
+    "prompt": "Replace the glass coffee table with a wooden one.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the glass coffee table with a wooden one.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 10,
+    "prompt": "Add a faux fur rug for contrast.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a faux fur rug for contrast.\"\n\nEvaluate this image with EXTREME scru"
+  },
+  {
+    "index": 11,
+    "prompt": "Replace the geometric rug with a plain beige rug.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the geometric rug with a plain beige rug.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 12,
+    "prompt": "Change the leather armchairs to fabric armchairs.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the leather armchairs to fabric armchairs.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 13,
+    "prompt": "Add abstract wall art on the brick walls.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add abstract wall art on the brick walls.\"\n\nEvaluate this image with EXT"
+  },
+  {
+    "index": 14,
+    "prompt": "Change the material to glass.",
+    "score": 90.0,
+    "follows_instruction": true,
+    "reasoning": "The table is made of glass, as instructed. The transformation is perfect, with no flaws or deviations."
+  },
+  {
+    "index": 15,
+    "prompt": "Replace the queen-sized bed with a king-sized bed.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the queen-sized bed with a king-sized bed.\"\n\nEvaluate this image"
+  },
+  {
+    "index": 16,
+    "prompt": "Remove the floor-to-ceiling windows and replace them with a large artwork.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the floor-to-ceiling windows and replace them with a large artwor"
+  },
+  {
+    "index": 17,
+    "prompt": "Add a floor lamp for additional lighting.",
+    "score": 70.0,
+    "follows_instruction": true,
+    "reasoning": "The floor lamp is present but it is turned off, which is not the desired outcome. The lamp should be turned on to provide additional lighting as instructed."
+  },
+  {
+    "index": 18,
+    "prompt": "Replace the round table with a rectangular table.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the round table with a rectangular table.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 19,
+    "prompt": "Change the striped sofa to a rattan armchair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the striped sofa to a rattan armchair.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 20,
+    "prompt": "Remove the pattern.",
+    "score": 90.0,
+    "follows_instruction": true,
+    "reasoning": "The image transformation is perfect - every detail matches the instruction exactly, professional quality."
+  },
+  {
+    "index": 21,
+    "prompt": "Replace with aluminum blinds.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace with aluminum blinds.\"\n\nEvaluate this image with EXTREME scrutin"
+  },
+  {
+    "index": 22,
+    "prompt": "Remove the statement artwork and add a large mirror.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the statement artwork and add a large mirror.\"\n\nEvaluate this ima"
+  },
+  {
+    "index": 23,
+    "prompt": "Change to aluminum blinds.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change to aluminum blinds.\"\n\nEvaluate this image with EXTREME scrutiny. "
+  },
+  {
+    "index": 24,
+    "prompt": "Change the color to beige.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the color to beige.\"\n\nEvaluate this image with EXTREME scrutiny. "
+  },
+  {
+    "index": 25,
+    "prompt": "Replace the plaid pillows with faux fur pillows.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the plaid pillows with faux fur pillows.\"\n\nEvaluate this image w"
+  },
+  {
+    "index": 26,
+    "prompt": "Add a colorful wall decal.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a colorful wall decal.\"\n\nEvaluate this image with EXTREME scrutiny. "
+  },
+  {
+    "index": 27,
+    "prompt": "Remove the table.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the table.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh "
+  },
+  {
+    "index": 28,
+    "prompt": "Remove the desk.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the desk.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh a"
+  },
+  {
+    "index": 29,
+    "prompt": "Add a potted plant on the desk.",
+    "score": 90.0,
+    "follows_instruction": true,
+    "reasoning": "The potted plant is placed on the desk as instructed, and it is a clear and professional addition to the scene."
+  },
+  {
+    "index": 30,
+    "prompt": "Change to solid color curtains.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change to solid color curtains.\"\n\nEvaluate this image with EXTREME scrut"
+  },
+  {
+    "index": 31,
+    "prompt": "Remove the pillow.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the pillow.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh"
+  },
+  {
+    "index": 32,
+    "prompt": "Add a statement chandelier above the dining table.",
+    "score": 90.0,
+    "follows_instruction": true,
+    "reasoning": "The image transformation is perfect, with every detail matching the instruction exactly, and the professional quality is evident. The chandelier is a statement piece that adds elegance and sophisticat"
+  },
+  {
+    "index": 33,
+    "prompt": "Remove the exposed wooden beams.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the exposed wooden beams.\"\n\nEvaluate this image with EXTREME scru"
+  },
+  {
+    "index": 34,
+    "prompt": "Remove the books.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the books.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh "
+  },
+  {
+    "index": 35,
+    "prompt": "Replace the white slip-covered sofa with a wicker loveseat.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the white slip-covered sofa with a wicker loveseat.\"\n\nEvaluate t"
+  },
+  {
+    "index": 36,
+    "prompt": "Make the blinds wooden.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Make the blinds wooden.\"\n\nEvaluate this image with EXTREME scrutiny. Be "
+  },
+  {
+    "index": 37,
+    "prompt": "Make the blinds purple.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Make the blinds purple.\"\n\nEvaluate this image with EXTREME scrutiny. Be "
+  },
+  {
+    "index": 38,
+    "prompt": "Change the glass top to a marble top.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the glass top to a marble top.\"\n\nEvaluate this image with EXTREME"
+  },
+  {
+    "index": 39,
+    "prompt": "Replace the armchair with a rocking chair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the armchair with a rocking chair.\"\n\nEvaluate this image with EX"
+  },
+  {
+    "index": 40,
+    "prompt": "Replace the curtains with wooden blinds.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the curtains with wooden blinds.\"\n\nEvaluate this image with EXTR"
+  },
+  {
+    "index": 41,
+    "prompt": "Remove the books from the shelving units.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the books from the shelving units.\"\n\nEvaluate this image with EXT"
+  },
+  {
+    "index": 42,
+    "prompt": "Remove the intricate design from the area rug.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the intricate design from the area rug.\"\n\nEvaluate this image wit"
+  },
+  {
+    "index": 43,
+    "prompt": "Replace the floral curtains with sheer white curtains.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the floral curtains with sheer white curtains.\"\n\nEvaluate this i"
+  },
+  {
+    "index": 44,
+    "prompt": "Add a wall-mounted TV.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a wall-mounted TV.\"\n\nEvaluate this image with EXTREME scrutiny. Be h"
+  },
+  {
+    "index": 45,
+    "prompt": "Replace the brass floor lamp with an industrial style tripod lamp.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the brass floor lamp with an industrial style tripod lamp.\"\n\nEva"
+  },
+  {
+    "index": 46,
+    "prompt": "Add a vase with fresh flowers to the coffee table.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a vase with fresh flowers to the coffee table.\"\n\nEvaluate this image"
+  },
+  {
+    "index": 47,
+    "prompt": "Change the glass top to a marble top.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the glass top to a marble top.\"\n\nEvaluate this image with EXTREME"
+  },
+  {
+    "index": 48,
+    "prompt": "Add a blue decorative vase to the coffee table.",
+    "score": 80.0,
+    "follows_instruction": true,
+    "reasoning": "The vase is placed on the coffee table as instructed, but it is not a blue decorative vase. It is a regular blue vase. The image is still good, but it deviates slightly from the instruction.\n\nC: The b"
+  },
+  {
+    "index": 49,
+    "prompt": "Add a ceiling fan for better air circulation.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a ceiling fan for better air circulation.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 50,
+    "prompt": "Remove the bed.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the bed.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh an"
+  },
+  {
+    "index": 51,
+    "prompt": "Remove the brass floor lamp.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the brass floor lamp.\"\n\nEvaluate this image with EXTREME scrutiny"
+  },
+  {
+    "index": 52,
+    "prompt": "Remove the bed.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the bed.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh an"
+  },
+  {
+    "index": 53,
+    "prompt": "Add a tall glass vase with fresh flowers on the table.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a tall glass vase with fresh flowers on the table.\"\n\nEvaluate this i"
+  },
+  {
+    "index": 54,
+    "prompt": "Replace the marble countertops with quartz countertops.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the marble countertops with quartz countertops.\"\n\nEvaluate this "
+  },
+  {
+    "index": 55,
+    "prompt": "Remove the sunburst wall clock.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the sunburst wall clock.\"\n\nEvaluate this image with EXTREME scrut"
+  },
+  {
+    "index": 56,
+    "prompt": "Change to a matte finish.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change to a matte finish.\"\n\nEvaluate this image with EXTREME scrutiny. B"
+  },
+  {
+    "index": 57,
+    "prompt": "Replace the vintage movie posters with vintage photographs.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the vintage movie posters with vintage photographs.\"\n\nEvaluate t"
+  },
+  {
+    "index": 58,
+    "prompt": "Add a potted plant in the corner of the room.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a potted plant in the corner of the room.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 59,
+    "prompt": "Add a bookshelf filled with books.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a bookshelf filled with books.\"\n\nEvaluate this image with EXTREME sc"
+  },
+  {
+    "index": 60,
+    "prompt": "Replace the crystal chandelier with a modern pendant light.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the crystal chandelier with a modern pendant light.\"\n\nEvaluate t"
+  },
+  {
+    "index": 61,
+    "prompt": "Replace the shag rug with a bamboo floor mat.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the shag rug with a bamboo floor mat.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 62,
+    "prompt": "Replace the glass coffee table with a wooden one.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the glass coffee table with a wooden one.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 63,
+    "prompt": "Replace the ergonomic chair with a vintage leather armchair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the ergonomic chair with a vintage leather armchair.\"\n\nEvaluate "
+  },
+  {
+    "index": 64,
+    "prompt": "Replace the mismatched vintage chairs with modern armchairs.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the mismatched vintage chairs with modern armchairs.\"\n\nEvaluate "
+  },
+  {
+    "index": 65,
+    "prompt": "Replace the floor cushions with a colorful pouf.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the floor cushions with a colorful pouf.\"\n\nEvaluate this image w"
+  },
+  {
+    "index": 66,
+    "prompt": "Change the platform bed to a canopy bed.",
+    "score": 0,
+    "follows_instruction": false,
+    "reasoning": "The image has been altered to make the canopy bed look like a platform bed, but it is not a true transformation. The original canopy bed is still visible."
+  },
+  {
+    "index": 67,
+    "prompt": "Replace the black sofa with a tufted beige sofa.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the black sofa with a tufted beige sofa.\"\n\nEvaluate this image w"
+  },
+  {
+    "index": 68,
+    "prompt": "Replace the bamboo material with fabric.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the bamboo material with fabric.\"\n\nEvaluate this image with EXTR"
+  },
+  {
+    "index": 69,
+    "prompt": "Replace the terracotta tiles with hardwood flooring.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the terracotta tiles with hardwood flooring.\"\n\nEvaluate this ima"
+  },
+  {
+    "index": 70,
+    "prompt": "Remove the cabinet.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the cabinet.\"\n\nEvaluate this image with EXTREME scrutiny. Be hars"
+  },
+  {
+    "index": 71,
+    "prompt": "Remove the minimalist bookshelf.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the minimalist bookshelf.\"\n\nEvaluate this image with EXTREME scru"
+  },
+  {
+    "index": 72,
+    "prompt": "Remove the bookcase.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the bookcase.\"\n\nEvaluate this image with EXTREME scrutiny. Be har"
+  },
+  {
+    "index": 73,
+    "prompt": "Add a colorful accent rug beneath the glass coffee table.",
+    "score": 9.0,
+    "follows_instruction": false,
+    "reasoning": "[brief critical explanation]\n\nA: The colorful accent rug beneath the glass coffee table is a perfect addition to the room. The rug adds a pop of color and a cozy touch to the space. The glass coffee t"
+  },
+  {
+    "index": 74,
+    "prompt": "Change it to a glass desk.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change it to a glass desk.\"\n\nEvaluate this image with EXTREME scrutiny. "
+  },
+  {
+    "index": 75,
+    "prompt": "Replace the copper accents with brushed nickel hardware for a more modern feel.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the copper accents with brushed nickel hardware for a more moder"
+  },
+  {
+    "index": 76,
+    "prompt": "Change the drawer handle to a brass knob.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the drawer handle to a brass knob.\"\n\nEvaluate this image with EXT"
+  },
+  {
+    "index": 77,
+    "prompt": "Change the color to beige.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the color to beige.\"\n\nEvaluate this image with EXTREME scrutiny. "
+  },
+  {
+    "index": 78,
+    "prompt": "Remove the wall-mounted reading lamp.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the wall-mounted reading lamp.\"\n\nEvaluate this image with EXTREME"
+  },
+  {
+    "index": 79,
+    "prompt": "Add a floral pattern to the shades.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a floral pattern to the shades.\"\n\nEvaluate this image with EXTREME s"
+  },
+  {
+    "index": 80,
+    "prompt": "Replace the floor lamp with a hanging pendant light.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the floor lamp with a hanging pendant light.\"\n\nEvaluate this ima"
+  },
+  {
+    "index": 81,
+    "prompt": "Replace the cowhide rug with a jute rug.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the cowhide rug with a jute rug.\"\n\nEvaluate this image with EXTR"
+  },
+  {
+    "index": 82,
+    "prompt": "Remove the chair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the chair.\"\n\nEvaluate this image with EXTREME scrutiny. Be harsh "
+  },
+  {
+    "index": 83,
+    "prompt": "Add a subtle floral pattern.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a subtle floral pattern.\"\n\nEvaluate this image with EXTREME scrutiny"
+  },
+  {
+    "index": 84,
+    "prompt": "Replace the white leather ottoman with a tufted fabric ottoman.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the white leather ottoman with a tufted fabric ottoman.\"\n\nEvalua"
+  },
+  {
+    "index": 85,
+    "prompt": "Add a soft knitted blanket over the armchair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a soft knitted blanket over the armchair.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 86,
+    "prompt": "Add a red carpet runner on the staircase.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a red carpet runner on the staircase.\"\n\nEvaluate this image with EXT"
+  },
+  {
+    "index": 87,
+    "prompt": "Replace the leather sofa with a fabric sectional.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the leather sofa with a fabric sectional.\"\n\nEvaluate this image "
+  },
+  {
+    "index": 88,
+    "prompt": "Replace the floral wallpaper with a plain beige wallpaper.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the floral wallpaper with a plain beige wallpaper.\"\n\nEvaluate th"
+  },
+  {
+    "index": 89,
+    "prompt": "Remove the granite countertops and replace them with marble countertops.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the granite countertops and replace them with marble countertops."
+  },
+  {
+    "index": 90,
+    "prompt": "Change the intricate carvings to a simple modern design.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the intricate carvings to a simple modern design.\"\n\nEvaluate this"
+  },
+  {
+    "index": 91,
+    "prompt": "Change the colorful wall decals to a whimsical wallpaper.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Change the colorful wall decals to a whimsical wallpaper.\"\n\nEvaluate thi"
+  },
+  {
+    "index": 92,
+    "prompt": "Add a set of blue velvet pillows on the sofa.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a set of blue velvet pillows on the sofa.\"\n\nEvaluate this image with"
+  },
+  {
+    "index": 93,
+    "prompt": "Add a cowhide rug to the floor.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a cowhide rug to the floor.\"\n\nEvaluate this image with EXTREME scrut"
+  },
+  {
+    "index": 94,
+    "prompt": "Replace the wicker chair with a hanging hammock chair.",
+    "score": 90.0,
+    "follows_instruction": true,
+    "reasoning": "The transformation is perfect, every detail matches the instruction exactly, and the professional quality is evident."
+  },
+  {
+    "index": 95,
+    "prompt": "Add books and decorative items to the shelving.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add books and decorative items to the shelving.\"\n\nEvaluate this image wi"
+  },
+  {
+    "index": 96,
+    "prompt": "Remove the modern armchair.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the modern armchair.\"\n\nEvaluate this image with EXTREME scrutiny."
+  },
+  {
+    "index": 97,
+    "prompt": "Remove the deer head.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Remove the deer head.\"\n\nEvaluate this image with EXTREME scrutiny. Be ha"
+  },
+  {
+    "index": 98,
+    "prompt": "Replace the bamboo material with fabric.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Replace the bamboo material with fabric.\"\n\nEvaluate this image with EXTR"
+  },
+  {
+    "index": 99,
+    "prompt": "Add a statement mirror on the wall above the sofa.",
+    "score": 50,
+    "follows_instruction": null,
+    "reasoning": "\nUSER: You are a HIGHLY CRITICAL interior design expert evaluating an AI-generated image transformation.\n\nThe instruction was: \"Add a statement mirror on the wall above the sofa.\"\n\nEvaluate this image"
+  }
+]
